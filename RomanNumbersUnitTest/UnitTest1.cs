@@ -127,5 +127,13 @@ namespace RomanNumbersUnitTest
             var n2 = new RomanNumberExtend(1);
             Assert.IsTrue(n1.CompareTo(n2) == 0);
         }
+        [TestMethod]
+        [ExpectedException(typeof(RomanNumberException))]
+        public void TestRomanNumberExtendConstruct2()
+        {
+            var n1 = new RomanNumberExtend("IIIIV");
+            Console.WriteLine(n1);
+
+        }
     }
 }

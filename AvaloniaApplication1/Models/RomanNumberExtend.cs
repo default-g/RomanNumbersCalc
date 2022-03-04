@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
 
 namespace AvaloniaApplication1.Models
 {
     public class RomanNumberExtend: RomanNumber
     {
+        
         public RomanNumberExtend(string num) : base(romanToInt(num)) { }
         public RomanNumberExtend(ushort n) : base(n) { }
             private static ushort value(char r)
@@ -31,6 +34,11 @@ namespace AvaloniaApplication1.Models
 
         private static ushort romanToInt(string s)
         {
+            if (!RomanNumberValidator.ValidateRomanNumber(s)) 
+            {
+                throw new RomanNumberException();
+            }
+            
             ushort total = 0;
             for (int i = 0; i < s.Length; i++)
             {
@@ -54,5 +62,7 @@ namespace AvaloniaApplication1.Models
             }
             return total;
         }
-        }
+
+    }
+   
 }
