@@ -23,22 +23,22 @@
 			<RowDefinition Height="1*" />
 		</Grid.RowDefinitions>
 
-		<TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="66" IsUndoEnabled="False" Focusable="False"></TextBox>
+		<TextBox Name="InputField" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="66" IsUndoEnabled="False" Focusable="False" Text="{Binding Input}" />
 
 
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" >I</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" >L</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" >M</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" >*</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="I">I</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="L">L</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="M">M</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="*">*</Button>
 
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" >V</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" >C</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" >+</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" >/</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="V">V</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="C">C</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="+">+</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="2" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="/">/</Button>
 
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" >X</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" >D</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" >-</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="X">X</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="D">D</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="-">-</Button>
 		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" >=</Button>
 	</Grid>
 	
