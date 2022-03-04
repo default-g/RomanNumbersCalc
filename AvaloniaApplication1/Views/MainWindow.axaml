@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
 		Width="450" Height="450"
+		MaxWidth="450" MaxHeight="450"
+		MinWidth="450" MinHeight="450"
         x:Class="AvaloniaApplication1.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="AvaloniaApplication1">
@@ -23,7 +25,7 @@
 			<RowDefinition Height="1*" />
 		</Grid.RowDefinitions>
 
-		<TextBox Name="InputField" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="66" IsUndoEnabled="False" Focusable="False" Text="{Binding Input}" />
+		<TextBox Name="InputField" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" FontSize="66" IsUndoEnabled="False" Focusable="False" Text="{Binding Input}" FontFamily="Georgia"/>
 
 
 		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="1" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="I">I</Button>
@@ -39,7 +41,7 @@
 		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="X">X</Button>
 		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="D">D</Button>
 		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="2" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ChangeInput}" CommandParameter="-">-</Button>
-		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" >=</Button>
+		<Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="3" Grid.Row="3" FontSize="36" FontFamily="Times New Roman" Command="{Binding ClearInput}">=</Button>
 	</Grid>
 	
 </Window>

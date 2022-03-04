@@ -12,7 +12,7 @@ namespace AvaloniaApplication1.ViewModels
         public MainWindowViewModel()
         {
             ChangeInput = ReactiveCommand.Create((string x) => Input += x);
-
+            ClearInput = ReactiveCommand.Create(() => Input = "");
         }
         public string Input
         {
@@ -26,6 +26,6 @@ namespace AvaloniaApplication1.ViewModels
             }
         }
         public ReactiveCommand<string, string> ChangeInput { get; }
-
+        public ReactiveCommand<Unit, string> ClearInput { get; }
     }
 }
