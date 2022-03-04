@@ -10,7 +10,7 @@ namespace AvaloniaApplication1.Models
 {
     public class RomanNumberExtend: RomanNumber
     {
-        
+        public ushort UshortValue() => this.number;
         public RomanNumberExtend(string num) : base(romanToInt(num)) { }
         public RomanNumberExtend(ushort n) : base(n) { }
             private static ushort value(char r)
@@ -34,7 +34,7 @@ namespace AvaloniaApplication1.Models
 
         private static ushort romanToInt(string s)
         {
-            if (!RomanNumberValidator.ValidateRomanNumber(s)) 
+            if (!RomanNumberValidator.Validate(s)) 
             {
                 throw new RomanNumberException();
             }
